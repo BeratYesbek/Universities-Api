@@ -10,6 +10,8 @@ module GlobalUniversitiesApi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    Rails.application.config.active_record.belongs_to_required_by_default = false
+
 
     # Configuration for the application, engines, and railties goes here.
     #

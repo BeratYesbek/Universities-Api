@@ -17,7 +17,7 @@ module Api
     end
 
     def create
-      @country = Country.create(state_params)
+      @country = Country.create(country_params)
       if @country.valid?
         if @country.save
           @message = "Country has been created successfully"
@@ -33,7 +33,7 @@ module Api
 
     def update
       if @country.valid?
-        if @country.update(state_params)
+        if @country.update(country_params)
           @message = "Country has been created successfully"
           render json: @country
         else

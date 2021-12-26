@@ -4,7 +4,7 @@ module Api
 
     def index
       @cities = City.all
-      if @cities.blank?
+      if !@cities.blank?
         render json: @cities
       end
     end
@@ -17,23 +17,23 @@ module Api
     end
 
     def create
-      @city = City.create(state_params)
+      @city = City.create(city_params)
       if @city.valid?
         if @city.save
           @message = "City has been created successfully"
           render json: @city
         else
-          handler_error
+          render json: "error"
         end
       else
         @message = @city.errors.full_messages
-        handler_error
+        render json: @message
       end
     end
 
     def update
       if @city.valid?
-        if @city.update(state_params)
+        if @city.update(city_params)
           @message = "City has been created successfully"
           render json: @city
         else
