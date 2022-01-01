@@ -3,6 +3,7 @@ module Api
     before_action :set_city, only: %i[update show destroy]
 
     def index
+
       @cities = City.all
       if !@cities.blank?
         render json: @cities

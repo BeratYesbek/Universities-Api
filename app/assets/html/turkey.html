@@ -1,0 +1,3103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="YÖK Akademik Arama">
+    <meta name="author" content="AYDIN EMRE CEVİZ, MUSTAFA IŞIK">
+
+    <link rel="shortcut icon" href="">
+    <title>COUNCIL OF HIGHER EDUCATION</title>
+    <!-- CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/custom.css?v=2218" rel="stylesheet">
+    <link href="../css/bootstrapValidator.css" rel="stylesheet">
+    <!-- Hata ayıklama ie! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+<div class="bodyback">
+    <!--Ust menu-->
+
+
+
+    <div class="container-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top navbarBackground" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar_brand" href="../"><img src="../images/miniLogoEn.png" class="logo" alt="Yükseköğretim Kurulu Akademik Arama"></a>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="active"><a href="../">Home</a></li>
+
+                        <li class="active"><a href="#" onclick="yonlendir('/AkademikArama/LanguageServlet?dil=trHome');">Türkçe</a></li>
+                        <li class="active"> <a href="#"  onclick="yonlendir('/AkademikArama/LanguageServlet?dil=enHome');"> English</a> </li>
+                    </ul>
+                </div> <!--navbar-collapse bitis-->
+            </div> <!--container bitis-->
+
+            <!--Arama Bölmesi-->
+            <div class="container-fluid">
+
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-9 col-md-offset-2 col-sm-offset-3 col-xs-offset-2">
+                    <form id="searchForm" class="form-horizontal error" action="/AkademikArama/AkademisyenArama" method="post">
+                        <div class="row">
+                            <div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input name="aramaTerim" type="text" value="" class="form-control" placeholder="Search for" minlength="3" maxlength="50" required
+                                               data-bv-notempty data-bv-notempty-message="Please enter keyword to search"
+                                               data-bv-stringlength-message="Please enter minumum 3,maximum 30 characters"
+                                               data-bv-stringlength-min="3"
+                                               data-bv-stringlength-max="50">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit" id="searchButton"
+                                                    data-container="body"
+                                                    data-toggle="popover"
+                                                    data-placement="bottom"
+                                                    data-trigger="hover"
+                                            ><i class="glyphicon glyphicon-search"></i></button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                                <span class="caret"></span>
+                                                <span class="sr-only"></span>
+                                            </button><INPUT type="hidden" name="islem" value="1">
+                                            <ul class="dropdown-menu dropdown-menu-form pull-right" role="menu">   <!--Arama secenekleri-->
+                                                <li>
+                                                    <label class="checkbox" >
+
+                                                        <input id="yazarCheckbox" name="yazarCheckbox" type="checkbox"  checked="checked">
+                                                        Academicians
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="kitapCheckbox" name="kitapCheckbox" type="checkbox" checked="checked">
+                                                        Books
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="PatentCheckbox" name="PatentCheckbox" type="checkbox" checked="checked">
+                                                        Patents
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="projeCheckbox" name="projeCheckbox" type="checkbox" checked="checked">
+                                                        Projects
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="MakaeleCheckbox" name="MakaeleCheckbox" type="checkbox" checked="checked">
+                                                        Articles
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="BildiriCheckbox" name="BildiriCheckbox" type="checkbox" checked="checked">
+                                                        Proceedings
+                                                    </label>
+                                                </li>
+
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="SanatsalCheckbox" name="SanatsalCheckbox" type="checkbox" checked="checked">
+                                                        Art Activities
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox">
+                                                        <input id="TezCheckbox" name="TezCheckbox" type="checkbox" checked="checked">
+                                                        Theses
+                                                    </label>
+                                                </li>
+
+                                            </ul> <!--Arama secenekleri bitis-->
+
+                                        </div>
+                                    </div>
+                                </div><!-- /.input-group -->
+                            </div>
+                        </div><!-- /.row -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <script type="text/javascript">
+        function yonlendir(url)
+        {
+            window.location.href =url;
+
+        }
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-73670219-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <hr>
+    <hr>
+    <!-- Content -->
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="input-group">
+                <span class="input-group-addon">Filter</span>
+
+                <input id="filter" type="text" class="form-control"
+                       placeholder="Filter by university/city/status"
+                       onkeyup="this.value=this.value.buyukHarf()">
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>University (207)</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Established</th>
+                    <th>Rector</th>
+
+                </tr>
+                </thead>
+                <tbody class="searchable">
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7OTUcYb-WAAZ0RZm-zUncfKRkLi5eSVnKbktSdmDPA1">ABDULLAH GUL UNIVERSITY</a></td>
+                    <td>KAYSERİ</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=8DE5B7DE77185A8E">PROF.DR. CENGİZ YILMAZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2hm7esP4X5xLAXz6b2F2Rrv96FgaKCkCWcpWlro_ywH">ACIBADEM MEHMET ALI AYDINLAR UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=C489F4EE4733DA6B">PROF.DR. AHMET ŞAHİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH51JBATRc0OMkhQglT8cHMZZ0rDnHIo0dVL3b_ZK_h53">ADANA ALPARSLAN TURKES SCIENCE AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>ADANA</td>
+                    <td>STATE</td>
+                    <td>2011</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=08B006DF3232D48F">PROF.DR. MEHMET TÜMAY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH46ICbRHi9EwaFVd3G88sj_KRkLi5eSVnKbktSdmDPA1">ADIYAMAN UNIVERSITY</a></td>
+                    <td>ADIYAMAN</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=667FEAA8146EDF0D">PROF.DR. MEHMET TURGUT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_bkShcaIGsIczfY6rHkmfDKRkLi5eSVnKbktSdmDPA1">AFYON KOCATEPE UNIVERSITY</a></td>
+                    <td>AFYONKARAHİSAR</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=C99AFFBD964D52FE">PROF.DR. MEHMET KARAKAŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHw27_AZ1Mfadm4r6n2YLgcnKRkLi5eSVnKbktSdmDPA1">AFYONKARAHISAR HEALTH SCIENCES UNIVERSITY</a></td>
+                    <td>AFYONKARAHİSAR</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=C4531611921C222D">PROF.DR. NURULLAH OKUMUŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH30JIl0L9XjD6SRy2d3Q2vQRd242XOlgWf9_adZszWwP">AGRI IBRAHIM CECEN UNIVERSITY</a></td>
+                    <td>AĞRI</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=4C8311DAD05E4F95">PROF.DR. ABDULHALİK KARABULUT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3xbeC8mma5Um2T3DauL7eBZ0rDnHIo0dVL3b_ZK_h53">AKDENIZ UNIVERSITY</a></td>
+                    <td>ANTALYA</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F6F58F93855DADDB">PROF.DR. ÖZLENEN ÖZKAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHz26XLYSrju5iWb1LbYhl_JbvbgQ2O_T1ouh_7FLbWHJ">AKSARAY UNIVERSITY</a></td>
+                    <td>AKSARAY</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=5022E549EA83374D">PROF.DR. YUSUF ŞAHİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwVVM6xqeViYRW2vIahnMxURd242XOlgWf9_adZszWwP">ALANYA ALAADDIN KEYKUBAT UNIVERSITY</a></td>
+                    <td>ANTALYA</td>
+                    <td>STATE</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=6E9945D8D43062BF">PROF.DR. EKREM KALAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6S1HODtg7ZrwZ1mjJCrHVoRd242XOlgWf9_adZszWwP">ALANYA HAMDULLAH EMIN PASA UNIVERSITY</a></td>
+                    <td>ANTALYA</td>
+                    <td>FOUNDATION</td>
+                    <td>2011</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=961544C01C738ED8">PROF.DR. EBRU GÜLBUĞ EROL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyu_yTAjfPEVDT1OLi3Rb37KRkLi5eSVnKbktSdmDPA1">ALTINBAS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=245BA85094996C52">PROF.DR. ÇAĞRI ERHAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH87Id-kUj76oNnAEteeikipZ0rDnHIo0dVL3b_ZK_h53">AMASYA UNIVERSITY</a></td>
+                    <td>AMASYA</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=623E40D344C499AD">PROF.DR. SÜLEYMAN ELMACI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxOEcfUDqF0t9BDSafqsURPDSh--IWGUumkwXAa42sRR">ANADOLU UNIVERSITY</a></td>
+                    <td>ESKİŞEHİR</td>
+                    <td>STATE</td>
+                    <td>1973</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=EF99F153FE55C148">PROF.DR. FUAT ERDAL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7XuaQPelXz7qZ6xavH3zZ8Rd242XOlgWf9_adZszWwP">ANKA UNIVERSITY OF TECHNOLOGY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2013</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6S50O802mZuxtbwRNXN-qJeEQelTm-XyRhBW_4oLHrN">ANKARA SCIENCE UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2020</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A100D426AED7D29D">PROF.DR. YAVUZ DEMİR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6GBmsQdmZuk_iPHbtyE8LdbvbgQ2O_T1ouh_7FLbWHJ">ANKARA HACI BAYRAM VELI UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=2B6EA76819CB2DCD">PROF.DR. YUSUF TEKİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyQT21zwIkVtiRFfUpofkr7DSh--IWGUumkwXAa42sRR">ANKARA MEDIPOL UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=7184E8968744971D">PROF.DR. AHMET ZEKİ ŞENGİL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3YakmrbwujNWk1JlecNebwRd242XOlgWf9_adZszWwP">ANKARA MUSIC AND FINE ARTS UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>2017</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH38_0YKr6j0Xcd4_RuolW0TGrwTClGJU9GpHP-_2xehJ">SOCIAL SCIENCES UNIVERSITY OF ANKARA</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>2013</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=AE9A98466A836327">PROF.DR. MUSA KAZIM ARICAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzdwHe7NOn5wN9wWKThnLR5Z0rDnHIo0dVL3b_ZK_h53">ANKARA UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>1946</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=34C7915A9BE0483E">PROF.DR. NECDET ÜNÜVAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyDKNaFZs7pzAIpaHD4rQBM_HK2vOcGPj0bi__hecw25">ANKARA YILDIRIM BEYAZIT UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=427285CFC4060108">PROF.DR. İBRAHİM AYDINLI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwVVM6xqeViYRW2vIahnMxVbvbgQ2O_T1ouh_7FLbWHJ">ANTALYA AKEV UNIVERSITY</a></td>
+                    <td>ANTALYA</td>
+                    <td>FOUNDATION</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=6F1F72BF249BBE93">PROF.DR. KAMİLE AKGÜL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwLJrtgYGgtgOLYiMrEWWGleEQelTm-XyRhBW_4oLHrN">ANTALYA BILIM UNIVERSITY</a></td>
+                    <td>ANTALYA</td>
+                    <td>FOUNDATION</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=077F2D4401DEE307">PROF.DR. İSMAİL YÜKSEK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxkFYrmOU8gxiw2tdimpcgC6rGdYDplwTYkFx5fwwQCj">ARDAHAN UNIVERSITY</a></td>
+                    <td>ARDAHAN</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=93D90AC888AFEE94">PROF.DR. MEHMET BİBER</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH55b-X1YqhJ0huuY4xx6Nv8Rd242XOlgWf9_adZszWwP">ARTVIN CORUH UNIVERSITY</a></td>
+                    <td>ARTVİN</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=70866AD9F6E7BCED">PROF.DR. MUSTAFA SITKI BİLGİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4qbSx-ve8Pr5-B2rGyTKirGrwTClGJU9GpHP-_2xehJ">ATASEHIR ADIGUZEL VOCATIONAL SCHOOL</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION VS</td>
+                    <td>2014</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7mzOBot4yQvQkzzxtxeaXdbvbgQ2O_T1ouh_7FLbWHJ">ATATURK UNIVERSITY</a></td>
+                    <td>ERZURUM</td>
+                    <td>STATE</td>
+                    <td>1957</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E034F442D938D916">PROF.DR. ÖMER ÇOMAKLI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxGsVBuaLqWq0Fzs7VBL4cq6rGdYDplwTYkFx5fwwQCj">ATILIM UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9449B8EBA74C4DD7">PROF.DR. MEHMET YILDIRIM ÜÇTUĞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6Fw_VKEIsxApCL698_5-sXDSh--IWGUumkwXAa42sRR">UNIVERSITY OF EURASIA</a></td>
+                    <td>TRABZON</td>
+                    <td>FOUNDATION</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=18681CD1D94C915C">PROF.DR. KENAN İNAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_gsUN8nSF7sadESgduxj7NZ0rDnHIo0dVL3b_ZK_h53">AYDIN ADNAN MENDERES UNIVERSITY</a></td>
+                    <td>AYDIN</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=775F3BD29554B6C6">PROF.DR. OSMAN SELÇUK ALDEMİR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH60chK5hxnGRi-BwiW1ypzW6rGdYDplwTYkFx5fwwQCj">BAHCESEHIR UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1998</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=2AD3A5741B7B3406">PROF.DR. ŞİRİN KARADENİZ ORAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxbZ52_K5N6tmAarAQo79qcRd242XOlgWf9_adZszWwP">BALIKESIR UNIVERSITY</a></td>
+                    <td>BALIKESİR</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=EB539A867BF094F7">PROF.DR. İLTER KUŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwVVM6xqeViYRW2vIahnMxXDSh--IWGUumkwXAa42sRR">BANDIRMA ONYEDI EYLUL UNIVERSITY</a></td>
+                    <td>BALIKESİR</td>
+                    <td>STATE</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=AC47F5E3A0AFB74D">PROF.DR. SÜLEYMAN ÖZDEMİR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0umAy-8u50JC0CUJ8za2d9Z0rDnHIo0dVL3b_ZK_h53">BARTIN UNIVERSITY</a></td>
+                    <td>BARTIN</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=397F8BA8DD0951FE">PROF.DR. ORHAN UZUN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4-1QfoS8tPdGv0fJMFn9ZlZ0rDnHIo0dVL3b_ZK_h53">BASKENT UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>1994</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=5874ECE17C73C123">PROF.DR. ALİ HABERAL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4dYco-sFvluIFBobWvpwBMRd242XOlgWf9_adZszWwP">BATMAN UNIVERSITY</a></td>
+                    <td>BATMAN</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=43DC9B9A843506FF">PROF.DR. İDRİS DEMİR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHx_RfOMtqNMdjA6_ONEhr81eEQelTm-XyRhBW_4oLHrN">BAYBURT UNIVERSITY</a></td>
+                    <td>BAYBURT</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=94532776F02A4DFB">PROF.DR. MUTLU TÜRKMEN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1c2UuQkpJLsqZjLV7t0zRBeEQelTm-XyRhBW_4oLHrN">BEYKENT UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=6EF1F822A2215E2F">PROF.DR. ALİ MURAT FERMAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyKuBBY-DMILHh5aL2EB2L8Rd242XOlgWf9_adZszWwP">BEYKOZ UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2016</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=49FBCBD1AC7AB0B4">PROF.DR. MEHMET DURMAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1NmIeEAFshxJzbadD-wkKPv96FgaKCkCWcpWlro_ywH">BEZMI ALEM FOUNDATION UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=0380F703FC1437E0">PROF.DR. RÜMEYZA KAZANCIOĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1lKi5ueitxytaXOSS1yMg3v96FgaKCkCWcpWlro_ywH">BILECIK SEYH EDEBALI UNIVERSITY</a></td>
+                    <td>BİLECİK</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=2778D8BE784CCCB3">PROF.DR. ŞÜKRÜ BEYDEMİR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7jYlDP2DyCgh2vDP3cMJwXGrwTClGJU9GpHP-_2xehJ">BINGOL UNIVERSITY</a></td>
+                    <td>BİNGÖL</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=CE5CF05A091B2990">PROF.DR. İBRAHİM ÇAPAK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3Gh9ODKAnefTY6qXN2Cy9rDSh--IWGUumkwXAa42sRR">BIRUNI UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2014</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D68F26B7AA5E056B">PROF.DR. ADNAN YÜKSEL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzBoz-1NrDcCcUONWuoZZZZZ0rDnHIo0dVL3b_ZK_h53">BITLIS EREN UNIVERSITY</a></td>
+                    <td>BİTLİS</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=B7A43960FB30C436">PROF.DR. NECMETTİN ELMASTAŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2AiXn0F0ROKizPeu_EO0dxeEQelTm-XyRhBW_4oLHrN">BOGAZICI UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1971</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=65937EC409C9ADA8">PROF.DR. MEHMET NACİ İNCİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0TA3zRbIU00nRYaTG4PmJPKRkLi5eSVnKbktSdmDPA1">BOLU ABANT IZZET BAYSAL UNIVERSITY</a></td>
+                    <td>BOLU</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=C8F3BA2F24B47558">PROF.DR. MUSTAFA ALİŞARLI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzArlwjR2X7NTfqxihGn6TTv96FgaKCkCWcpWlro_ywH">BURDUR MEHMET AKIF ERSOY UNIVERSITY</a></td>
+                    <td>BURDUR</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=783B3B6C9A40EB7E">PROF.DR. ADEM KORKMAZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7OTUcYb-WAAZ0RZm-zUncfv96FgaKCkCWcpWlro_ywH">BURSA TECHNICAL UNIVERSITY</a></td>
+                    <td>BURSA</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=3382B1C79F68C929">PROF.DR. ARİF KARADEMİR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6n7vxW2aWqjA0SPJ7s0x7XGrwTClGJU9GpHP-_2xehJ">BURSA ULUDAG UNIVERSITY</a></td>
+                    <td>BURSA</td>
+                    <td>STATE</td>
+                    <td>1975</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A1E8BCD40C37CEFD">PROF.DR. AHMET SAİM KILAVUZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5OQjEz6N2DPTYAjc1cTtGTKRkLi5eSVnKbktSdmDPA1">CAG UNIVERSITY</a></td>
+                    <td>MERSİN</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=CBA7184CF08255B8">PROF.DR. ÜNAL AY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxP9tSkMtZCAJwEUtXwGAGdbvbgQ2O_T1ouh_7FLbWHJ">CANAKKALE ONSEKIZ MART UNIVERSITY</a></td>
+                    <td>ÇANAKKALE</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=51798704E8664679">PROF.DR. SEDAT MURAT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6o9TZgdSGDSXHrgN7wnDDteEQelTm-XyRhBW_4oLHrN">CANKAYA UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E3A146070850F201">PROF.DR. CAN ÇOĞUN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH30WqviHWI74zij_p20YB1jGrwTClGJU9GpHP-_2xehJ">CANKIRI KARATEKIN UNIVERSITY</a></td>
+                    <td>ÇANKIRI</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=BAD3F41F81BF846A">PROF.DR. HARUN ÇİFTÇİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwFuV4LQ1K9Z_QAbb33e-rTDSh--IWGUumkwXAa42sRR">CUKUROVA UNIVERSITY</a></td>
+                    <td>ADANA</td>
+                    <td>STATE</td>
+                    <td>1973</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=ECAD2D7B5CFD9508">PROF.DR. MERYEM TUNCEL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3GanX6Lniq8g3CgaEZIOK7DSh--IWGUumkwXAa42sRR">DEMIROGLU SCIENCE UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=7E708E90AF7A896B">PROF.DR. ÇAVLAN ÇİFTÇİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH27T46qVYAR29o7XvRXEWPkRd242XOlgWf9_adZszWwP">DICLE UNIVERSITY</a></td>
+                    <td>DİYARBAKIR</td>
+                    <td>STATE</td>
+                    <td>1973</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9DE00AF629FE743C">PROF.DR. MEHMET KARAKOÇ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-bs05AjQM7rEI3GCh3RB-leEQelTm-XyRhBW_4oLHrN">DOGUS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=29235884C7F80D89">PROF.DR. TURGUT ÖZKAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3Ua2NXOUst0QgDT6frMxWERd242XOlgWf9_adZszWwP">DOKUZ EYLUL UNIVERSITY</a></td>
+                    <td>İZMİR</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=22EA2A3F84817B25">PROF.DR. FATMA SENİHA NÜKHET HOTAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6m_sOHz1jzQsBW_KVis7L-6rGdYDplwTYkFx5fwwQCj">DUZCE UNIVERSITY</a></td>
+                    <td>DÜZCE</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=90CBA4521F1D243F">PROF.DR. NİGAR DEMİRCAN ÇAKAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7t_wA1BSuhftA1ztXgkWdW6rGdYDplwTYkFx5fwwQCj">EGE UNIVERSITY</a></td>
+                    <td>İZMİR</td>
+                    <td>STATE</td>
+                    <td>1955</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8g2f8H8MP9LEVMlJdast7JZ0rDnHIo0dVL3b_ZK_h53">ERCIYES UNIVERSITY</a></td>
+                    <td>KAYSERİ</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=874CF5B7EE547F3A">PROF.DR. MUSTAFA ÇALIŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7h-ymGaA-290jbO_KOMTuDKRkLi5eSVnKbktSdmDPA1">ERZINCAN BINALI YILDIRIM UNIVERSITY</a></td>
+                    <td>ERZİNCAN</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=0F84273E228C915B">PROF.DR. AKIN LEVENT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7OTUcYb-WAAZ0RZm-zUncdbvbgQ2O_T1ouh_7FLbWHJ">ERZURUM TECHNICAL UNIVERSITY</a></td>
+                    <td>ERZURUM</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=EF2A262B9DC0719B">PROF.DR. BÜLENT ÇAKMAK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8w01F-Oguz0kdZvhCgcWEtZ0rDnHIo0dVL3b_ZK_h53">ESKISEHIR OSMANGAZI UNIVERSITY</a></td>
+                    <td>ESKİŞEHİR</td>
+                    <td>STATE</td>
+                    <td>1993</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=3AF8DF66772BAA0A">PROF.DR. KEMAL ŞENOCAK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHw27_AZ1Mfadm4r6n2YLgck_HK2vOcGPj0bi__hecw25">ESKISEHIR TECHNICAL UNIVERSITY</a></td>
+                    <td>ESKİŞEHİR</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F20736A00F168EC3">PROF.DR. TUNCAY DÖĞEROĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1NmIeEAFshxJzbadD-wkKM_HK2vOcGPj0bi__hecw25">FATIH SULTAN MEHMET VAKIF UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=721088635F3B30DC">PROF.DR. MUHAMMED FATİH ANDI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6pazY0IDenwdKyx39IlJgM_HK2vOcGPj0bi__hecw25">FENERBAHCE UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2016</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=C43800F047363BDB">PROF.DR. MEHMET EMİN ARAT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_LS277ySwcXa032cxiMQTY_HK2vOcGPj0bi__hecw25">FIRAT UNIVERSITY</a></td>
+                    <td>ELAZIĞ</td>
+                    <td>STATE</td>
+                    <td>1975</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D3ADD8856AA55F87">PROF.DR. FAHRETTİN GÖKTAŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_N3tJLtl3k8tsFAr3RWjxZbvbgQ2O_T1ouh_7FLbWHJ">GALATASARAY UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1994</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=25056429C8E68DE3">PROF.DR. EYÜP ERTUĞRUL KARSAK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5EYK1GiQlLncbwY3sh1EtW6rGdYDplwTYkFx5fwwQCj">GAZI UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D68CDBF1C1B1F232">PROF.DR. MUSA YILDIZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4bTF-Op0nyMqGnSLZrQSvI_HK2vOcGPj0bi__hecw25">GAZIANTEP ISLAM SCIENCE AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>GAZİANTEP</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=67772CAD115B1B51">PROF.DR. MEHMET NİHAT HATİPOĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwYKXRJyOKp1ob7MuQ4DHU-6rGdYDplwTYkFx5fwwQCj">GAZIANTEP UNIVERSITY</a></td>
+                    <td>GAZİANTEP</td>
+                    <td>STATE</td>
+                    <td>1987</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E1FB8EC192503AA0">PROF.DR. ARİF ÖZAYDIN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8lhkmVP9OdJLWuz7ni5pa_DSh--IWGUumkwXAa42sRR">GEBZE TECHNICAL UNIVERSITY</a></td>
+                    <td>KOCAELİ</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=ABE79351CACA580D">PROF.DR. MUHAMMED HASAN ASLAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzWj8qqGrufSIZfd02JCpT3GrwTClGJU9GpHP-_2xehJ">GIRESUN UNIVERSITY</a></td>
+                    <td>GİRESUN</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=534CACDAD58C61FF">PROF.DR. YILMAZ CAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH9mVftC-upm0yW-Y9ab7_mgRd242XOlgWf9_adZszWwP">GUMUSHANE UNIVERSITY</a></td>
+                    <td>GÜMÜŞHANE</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=092D154B471785A2">PROF.DR. HALİL İBRAHİM ZEYBEK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHz9yCjsEusJ2ULdDMbC1juNeEQelTm-XyRhBW_4oLHrN">HACETTEPE UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>1967</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=B47D789C44CB1185">PROF.DR. MEHMET CAHİT GÜRAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHw400fd8QtOmN1X1PE93ptrDSh--IWGUumkwXAa42sRR">HAKKARI UNIVERSITY</a></td>
+                    <td>HAKKARİ</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9DEEFEFC3F99C05B">PROF.DR. ÖMER PAKİŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHysvH9wAKxTBgs03c3mFKS3KRkLi5eSVnKbktSdmDPA1">HALIC UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1998</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=32EA3487EBE94386">PROF.DR. ZAFER UTLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0xz1a6HnVK-rSoPucqTVr3GrwTClGJU9GpHP-_2xehJ">HARRAN UNIVERSITY</a></td>
+                    <td>ŞANLIURFA</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=1E53608F66CBB3F4">PROF.DR. MEHMET SABRİ ÇELİK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4MVHBt89nm4ruC7aH0bwOTGrwTClGJU9GpHP-_2xehJ">HASAN KALYONCU UNIVERSITY</a></td>
+                    <td>GAZİANTEP</td>
+                    <td>FOUNDATION</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=51B122445C6C4C59">PROF.DR. TÜRKAY DERELİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5CKp7gZgCO-dMUg8FvgdlFZ0rDnHIo0dVL3b_ZK_h53">HATAY MUSTAFA KEMAL UNIVERSITY</a></td>
+                    <td>HATAY</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=49EDB60C468D99CA">PROF.DR. HASAN KAYA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH79khSrZHRU3sH5_sLVxXxlZ0rDnHIo0dVL3b_ZK_h53">HITIT UNIVERSITY</a></td>
+                    <td>ÇORUM</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=CE9426DBB741B1BB">PROF.DR. ALİ OSMAN ÖZTÜRK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3UCyT_q9sZto2QlBpEnB-pbvbgQ2O_T1ouh_7FLbWHJ">IGDIR UNIVERSITY</a></td>
+                    <td>IĞDIR</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=050B8DCCD2B2ADC0">PROF.DR. MEHMET HAKKI ALMA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2FovbEkrse6zg-4v7VMzr1Z0rDnHIo0dVL3b_ZK_h53">ISPARTA UNIVERSITY OF APPLIED SCIENCES</a></td>
+                    <td>ISPARTA</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=3AA5CE07F7EC449A">PROF.DR. İBRAHİM DİLER</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7DeUnIoGj_gCISmeTHD90hbvbgQ2O_T1ouh_7FLbWHJ">ISIK UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1996</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=DCB8926276FBFBB4">PROF.DR. HASAN BÜLENT KAHRAMAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5QzuYrkJaDdGHjWgS_w2lE_HK2vOcGPj0bi__hecw25">IBN HALDUN UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F3183C48721ADC87">PROF.DR. ATİLLA ARKAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwKNYGVIyhAWURJwKyXNrF1Z0rDnHIo0dVL3b_ZK_h53">IHSAN DOGRAMACI BILKENT UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>1985</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=040AEA4CA05D983A">PROF.DR. ABDULLAH ATALAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4M70jtham_QNDuWfkk9XjbGrwTClGJU9GpHP-_2xehJ">INONU UNIVERSITY</a></td>
+                    <td>MALATYA</td>
+                    <td>STATE</td>
+                    <td>1975</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=74D83D1ABBE65058">PROF.DR. AHMET KIZILAY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5QzuYrkJaDdGHjWgS_w2lFeEQelTm-XyRhBW_4oLHrN">ISKENDERUN TECHNICAL UNIVERSITY</a></td>
+                    <td>HATAY</td>
+                    <td>STATE</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=4514616CDEBC3DDB">PROF.DR. TOLGA DEPCİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH79tde92E2sEbp0-lf2JbfoRd242XOlgWf9_adZszWwP">ISTANBUL AREL UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=1AADF6640406A5B0">PROF.DR. AHMET ERCAN GEGEZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2FovbEkrse6zg-4v7VMzr1bvbgQ2O_T1ouh_7FLbWHJ">ISTANBUL ATLAS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=7666A7DA2A9C0F5A">PROF.DR. MUSTAFA KÜÇÜK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7jDyzeXELN7iAeZa5BxP4k_HK2vOcGPj0bi__hecw25">ISTANBUL AYDIN UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=5522DFFDA5A57BD1">PROF.DR. YADİGAR İZMİRLİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2H4HFoM8GxA2uBC-pg47DzDSh--IWGUumkwXAa42sRR">ISTANBUL AYVANSARAY UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2016</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D7A17FB4CC0E3348">PROF.DR. EMRE ALKİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5RDtbZozBBa45lJLuuqgos_HK2vOcGPj0bi__hecw25">ISTANBUL BILGI UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1996</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F46CAB42F9A77027">PROF.DR. MEHMET NUR ALPASLAN PARLAKÇI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3FwRG3NPahsZP6T6xDn8Pnv96FgaKCkCWcpWlro_ywH">ISTANBUL ESENYURT UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2013</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=440883F128B7C246">PROF.DR. HAYRETTİN AKKAYA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3EJ2TQr1UJNIcI7SbevE2jv96FgaKCkCWcpWlro_ywH">ISTANBUL GALATA UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2019</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=463B455CA02A4B05">PROF.DR. ÖZGÜR ÇENGEL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1ye3VR8zLu9RZSayKEgGytZ0rDnHIo0dVL3b_ZK_h53">ISTANBUL GEDIK UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2011</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=8E2A4429753F4B66">PROF.DR. NİHAT AKKUŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH31Q7iDZOdBGR9H17J9iZSbKRkLi5eSVnKbktSdmDPA1">ISTANBUL GELISIM UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2011</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=6A42D63260AB09D4">PROF.DR. NAİL ÖZTAŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7GHBsHN2L4ViMRZk7WEfaU_HK2vOcGPj0bi__hecw25">ISTANBUL KENT UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2016</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=CC1CC71D43A16B82">PROF.DR. MEHMET NECMETTİN ATSÜ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1aCpaoM1jTIoWEuwvl5cjBeEQelTm-XyRhBW_4oLHrN">ISTANBUL KULTUR UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F61D825F1ACAEC96">PROF.DR. HANİFE ÖZTÜRK AKKARTAL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3RUCWRW-e8syPsvl0nr_I_GrwTClGJU9GpHP-_2xehJ">ISTANBUL MEDENIYET UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A214DA21E9617214">PROF.DR. GÜLFETTİN ÇELİK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1j9lIl79OMnm_pnPd6A2J9Z0rDnHIo0dVL3b_ZK_h53">ISTANBUL MEDIPOL UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=6CB4B9B45D918B9D">PROF.DR. ÖMER CERAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH65XikGmNrDxe5Lmook6a-s_HK2vOcGPj0bi__hecw25">ISTANBUL OKAN UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1999</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=43498F07544451A6">PROF.DR. MUSTAFA KOÇAK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5QzuYrkJaDdGHjWgS_w2lHGrwTClGJU9GpHP-_2xehJ">ISTANBUL RUMELI UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=87074E9ED631A4C0">PROF.DR. HAZİM TAMER DODURKA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8gjWQQkPU3NNtuQqlMnhg5Z0rDnHIo0dVL3b_ZK_h53">ISTANBUL SABAHATTIN ZAIM UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=637C4E30BD7B73B6">PROF.DR. MEHMET BULUT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0Lvt1iYC89cHUOh5pNHou-6rGdYDplwTYkFx5fwwQCj">null</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION VS</td>
+                    <td>2010</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3ETDCReuR3MT9hzQaaYXMK6rGdYDplwTYkFx5fwwQCj">ISTANBUL HEALTH AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=541CB6ABE1AB594F">PROF.DR. SEYHAN ALKAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0afylAbUUoRvbdK0S5dLGfDSh--IWGUumkwXAa42sRR">ISTANBUL SISLI VOCATIONAL SCHOOL</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION VS</td>
+                    <td>2012</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0k8UMKOMEGyuzBsLNqXzrbKRkLi5eSVnKbktSdmDPA1">ISTANBUL TECHNICAL UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1944</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=437D5ACC50CD2856">PROF.DR. İSMAİL KOYUNCU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3uuH6whQYJG2rfhIgsN2LNbvbgQ2O_T1ouh_7FLbWHJ">ISTANBUL COMMERCE UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2001</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9C86A0D85BB7CB7F">PROF.DR. YÜCEL OĞURLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyy_54TbiHhRqrjlbtg2AcwRd242XOlgWf9_adZszWwP">ISTANBUL UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1933</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=5F02F580303C8601">PROF.DR. MAHMUT AK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3X3-68-TM1VMjlhpD1cFe3v96FgaKCkCWcpWlro_ywH">ISTANBUL UNIVERSITY-CERRAHPASA</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E3D332E2B74DB05C">PROF.DR. NURİ AYDIN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-xWb1zxnjfbeInaknOhdxxbvbgQ2O_T1ouh_7FLbWHJ">ISTANBUL YENI YUZYIL UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A06A3F8BC295C8BB">PROF.DR. İLHAN YAŞAR HACISALİHOĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4KcKbtac0kG-eF5wNBWcHW6rGdYDplwTYkFx5fwwQCj">ISTANBUL 29 MAYIS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=14B5FBFB64955EE9">PROF.DR. MUSTAFA SİNANOĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5QzuYrkJaDdGHjWgS_w2lFZ0rDnHIo0dVL3b_ZK_h53">ISTINYE UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D6C2A56468ED4D0C">PROF.DR. ERDAL KARAÖZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7GHBsHN2L4ViMRZk7WEfaXGrwTClGJU9GpHP-_2xehJ">IZMIR BAKIRCAY UNIVERSITY </a></td>
+                    <td>İZMİR</td>
+                    <td>STATE</td>
+                    <td>2016</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=35B1C2AA14BEFB9D">PROF.DR. MUSTAFA BERKTAŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7GHBsHN2L4ViMRZk7WEfaVbvbgQ2O_T1ouh_7FLbWHJ">IZMIR DEMOCRACY UNIVERSITY</a></td>
+                    <td>İZMİR</td>
+                    <td>STATE</td>
+                    <td>2016</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9FCF2B29E99215EC">PROF.DR. BEDRİYE TUNÇSİPER</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_q4IHOIf_Kp31qbbTnd6B4_HK2vOcGPj0bi__hecw25">IZMIR UNIVERSITY OF ECONOMICS</a></td>
+                    <td>İZMİR</td>
+                    <td>FOUNDATION</td>
+                    <td>2001</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=65D90CAD0480C06E">PROF.DR. MURAT AŞKAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3RUCWRW-e8syPsvl0nr_I9Z0rDnHIo0dVL3b_ZK_h53">IZMIR KATIP CELEBI UNIVERSITY</a></td>
+                    <td>İZMİR</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=B7A1EEDE549E699F">PROF.DR. SAFFET KÖSE</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH1G03A7gF0ozTPZqNlHNVJ26rGdYDplwTYkFx5fwwQCj">IZMIR KAVRAM VOCATIONAL COLLEGE OF HIGHER EDUCATION</a></td>
+                    <td>İZMİR</td>
+                    <td>FOUNDATION VS</td>
+                    <td>2008</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2FovbEkrse6zg-4v7VMzr3GrwTClGJU9GpHP-_2xehJ">IZMIR TINAZTEPE UNIVERSITY</a></td>
+                    <td>İZMİR</td>
+                    <td>FOUNDATION</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D832802442C4B1BA">PROF.DR. MUSTAFA GÜVENÇER</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3MJpnk26Clqmp8U2ABMYlo_HK2vOcGPj0bi__hecw25">IZMIR INSTITUTE OF TECHNOLOGY</a></td>
+                    <td>İZMİR</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=354B4F92C056C731">PROF.DR. YUSUF BARAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-eNBshhTCHQxmo2x4wEHkbDSh--IWGUumkwXAa42sRR">KADIR HAS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=764D1D10C952B802">PROF.DR. MERYEM SONDAN DURUKANOĞLU FEYİZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH9CMeczZwxRsr15PfDj2fyhbvbgQ2O_T1ouh_7FLbWHJ">KAFKAS UNIVERSITY</a></td>
+                    <td>KARS</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=16042E0A3AD353EE">PROF.DR. HÜSNÜ KAPU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2FovbEkrse6zg-4v7VMzr3v96FgaKCkCWcpWlro_ywH">KAHRAMANMARAS ISTIKLAL UNIVERSITY</a></td>
+                    <td>KAHRAMANMARAŞ</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=3B091068DE274E8A">PROF.DR. SAMİ ÖZGÜL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3bRX-uTH2XsAsn65KiG905Z0rDnHIo0dVL3b_ZK_h53">KAHRAMANMARAS SUTCU IMAM UNIVERSITY</a></td>
+                    <td>KAHRAMANMARAŞ</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=EF161B82BFF7A493">PROF.DR. NİYAZİ CAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH58Mu4neq_M5MkpXr0dZvAXGrwTClGJU9GpHP-_2xehJ">CAPPADOCIA UNIVERSITY</a></td>
+                    <td>NEVŞEHİR</td>
+                    <td>FOUNDATION</td>
+                    <td>2005</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=078ECBB75A5D1D41">PROF.DR. HASAN ALİ KARASAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8F7nC-3eJB1Au4OwwzSKFq6rGdYDplwTYkFx5fwwQCj">KARABUK UNIVERSITY</a></td>
+                    <td>KARABÜK</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=5E791AE4159056C5">PROF.DR. REFİK POLAT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_SAQjg6YRewQvbDhTo29Fk_HK2vOcGPj0bi__hecw25">KARADENIZ TECHNICAL UNIVERSITY</a></td>
+                    <td>TRABZON</td>
+                    <td>STATE</td>
+                    <td>1955</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=CC5D878BEA3B5344">PROF.DR. HAMDULLAH ÇUVALCI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxdQgM1jW3OXZWKF784THIMRd242XOlgWf9_adZszWwP">KARAMANOGLU MEHMETBEY UNIVERSITY</a></td>
+                    <td>KARAMAN</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=BD65F3A596FFD700">PROF.DR. NAMIK AK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH28dyljsBISUOu59VoUJwSoRd242XOlgWf9_adZszWwP">KASTAMONU UNIVERSITY</a></td>
+                    <td>KASTAMONU</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D21775F7B6FAC5FF">PROF.DR. AHMET HAMDİ TOPAL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2FovbEkrse6zg-4v7VMzr0Rd242XOlgWf9_adZszWwP">KAYSERI UNIVERSITY</a></td>
+                    <td>KAYSERİ</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=AAB7879DF9D32496">PROF.DR. KURTULUŞ KARAMUSTAFA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8Q1c5eIQRkQfw9W1ZHeaeARd242XOlgWf9_adZszWwP">KIRIKKALE UNIVERSITY</a></td>
+                    <td>KIRIKKALE</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=8285039F00E5BD2D">PROF.DR. ERSAN ASLAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzkKZ5gLhcxsk0qi39iN6XJeEQelTm-XyRhBW_4oLHrN">KIRKLARELI UNIVERSITY</a></td>
+                    <td>KIRKLARELİ</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D94C732BCC092F48">PROF.DR. BÜLENT ŞENGÖRÜR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHz8FICkSPZr8XAQnuvtwX8VbvbgQ2O_T1ouh_7FLbWHJ">KIRSEHIR AHI EVRAN UNIVERSITY</a></td>
+                    <td>KIRŞEHİR</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=7A88278643D10A5E">PROF.DR. VATAN KARAKAYA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7Ua3_oJZ9jVtHSEuRS1tXLGrwTClGJU9GpHP-_2xehJ">KILIS 7 ARALIK UNIVERSITY</a></td>
+                    <td>KİLİS</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=AE9FDDF7002276B1">PROF.DR. MUSTAFA DOĞAN KARACOŞKUN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-uu7uQsuArYkzC8ztXhXYoRd242XOlgWf9_adZszWwP">KOCAELI HEALTH AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>KOCAELİ</td>
+                    <td>FOUNDATION</td>
+                    <td>2020</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=B0E3EA7BE2C5AC22">PROF.DR. FUAT BAYRAM</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzIC_6A01gqZ9g3IEJ5EP7HKRkLi5eSVnKbktSdmDPA1">KOCAELI UNIVERSITY</a></td>
+                    <td>KOCAELİ</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F1055CFD299D4547">PROF.DR. SADETTİN HÜLAGÜ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3EV-HgUOCKDEpKjAhiplZARd242XOlgWf9_adZszWwP">KOC UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F5E373A73CB01F9D">PROF.DR. ZEYNEP CANLI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3FwRG3NPahsZP6T6xDn8PnGrwTClGJU9GpHP-_2xehJ">KONYA FOOD AND AGRICULTURE UNIVERSITY</a></td>
+                    <td>KONYA</td>
+                    <td>FOUNDATION</td>
+                    <td>2013</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=86D4A66A0CE490A1">PROF.DR. CUMHUR ÇÖKMÜŞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyYkO32x67De-H7yWmtvtfDKRkLi5eSVnKbktSdmDPA1">KONYA TECHNICAL UNIVERSITY</a></td>
+                    <td>KONYA</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=8C9A1FB679C31155">PROF.DR. BABÜR ÖZÇELİK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH77EebTPuyIE8t7Ikoa5LXkRd242XOlgWf9_adZszWwP">KTO KARATAY UNIVERSITY</a></td>
+                    <td>KONYA</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=461055B683CCB89A">PROF.DR. BAYRAM SADE</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2UfvCLI_YrlV_1DJ4WEudvKRkLi5eSVnKbktSdmDPA1">KUTAHYA DUMLUPINAR UNIVERSITY</a></td>
+                    <td>KÜTAHYA</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=1709EC8A138E8E50">PROF.DR. KÂZIM UYSAL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3X3-68-TM1VMjlhpD1cFe1eEQelTm-XyRhBW_4oLHrN">KUTAHYA HEALTH SCIENCES UNIVERSITY</a></td>
+                    <td>KÜTAHYA</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3CUx-DfTappOS6yMyhusbzv96FgaKCkCWcpWlro_ywH">LOKMAN HEKIM UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2017</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=1E94731BCFDF44AB">PROF.DR. BÜLENT GÜMÜŞEL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3X3-68-TM1VMjlhpD1cFe0Rd242XOlgWf9_adZszWwP">MALATYA TURGUT OZAL UNIVERSITY</a></td>
+                    <td>MALATYA</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A5FD8A72BA38626C">PROF.DR. AYSUN BAY KARABULUT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH6fCnbMe7J1CYVBlG_-1HPgRd242XOlgWf9_adZszWwP">MALTEPE UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1997</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=00E23F8AACAE0E76">PROF.DR. ŞAHİN KARASAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH9JMXYSSAKj1PMCXGWpw5JDKRkLi5eSVnKbktSdmDPA1">MANISA CELAL BAYAR UNIVERSITY</a></td>
+                    <td>MANİSA</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=BEFBCD03D870CDF3">PROF.DR. AHMET ATAÇ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0fNNGuLz-6-sF5Ul_1KVEbv96FgaKCkCWcpWlro_ywH">MARDIN ARTUKLU UNIVERSITY</a></td>
+                    <td>MARDİN</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=494327869DAAFABF">PROF.DR. İBRAHİM ÖZCOŞAR</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHymnFfk9Hfs6hh7zaizBuDzv96FgaKCkCWcpWlro_ywH">MARMARA UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A0BB2E8DB092343E">PROF.DR. MUSTAFA KURT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_WHxbAJvGJ1mvGOkiGC7OIRd242XOlgWf9_adZszWwP">MEF UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2012</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=EBF68A3226971A28">PROF.DR. MUHAMMED ŞAHİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-GoqdMw4DYZG6zuF_2Vqug_HK2vOcGPj0bi__hecw25">MERSIN UNIVERSITY</a></td>
+                    <td>MERSİN</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=AFF9513C850EC5E5">PROF.DR. AHMET ÇAMSARI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0YxhGDQ7G2-tUaegqA4GsXDSh--IWGUumkwXAa42sRR">MIMAR SINAN FINE ARTS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=3635DB0742B2B199">PROF.DR. HANDAN İNCİ ELÇİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2-E7Pul2IFGPxx_KJ7ChOXv96FgaKCkCWcpWlro_ywH">MUGLA SITKI KOCMAN UNIVERSITY</a></td>
+                    <td>MUĞLA</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=FCAE3A0D0C58AE81">PROF.DR. HÜSEYİN ÇİÇEK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3hfsuDFWTjdebROZgtoaCrKRkLi5eSVnKbktSdmDPA1">MUNZUR UNIVERSITY</a></td>
+                    <td>TUNCELİ</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=58493A065BAC9BDE">PROF.DR. UBEYDE İPEK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxs_ne_o5FBl0dxttfvXoFbv96FgaKCkCWcpWlro_ywH">MUS ALPARSLAN UNIVERSITY</a></td>
+                    <td>MUŞ</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=8FEA9851C873F2F6">PROF.DR. FETHİ AHMET POLAT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8p1ZIu7J6M5HBumK-HDTWG6rGdYDplwTYkFx5fwwQCj">NECMETTIN ERBAKAN UNIVERSITY</a></td>
+                    <td>KONYA</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E3CF3DBEEB62FCD9">PROF.DR. CEM ZORLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2RCrtjEE_UIP_ZLCOiwuaPv96FgaKCkCWcpWlro_ywH">NEVSEHIR HACI BEKTAS VELI UNIVERSITY</a></td>
+                    <td>NEVŞEHİR</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=600F6388D2B55230">PROF.DR. SEMİH AKTEKİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyH1daBFzwasVHqQbxPddG7GrwTClGJU9GpHP-_2xehJ">NIGDE OMER HALISDEMIR UNIVERSITY</a></td>
+                    <td>NİĞDE</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D14B8B207269FBF4">PROF.DR. HASAN USLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7aPoRDtTx_-Ok2dZhQlpYc_HK2vOcGPj0bi__hecw25">NISANTASI UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A93B79E76B3DC281">PROF.DR. ŞENAY YALÇIN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0jGpeglDlg5ZFYZzFLj_vXDSh--IWGUumkwXAa42sRR">NUH NACI YAZGAN UNIVERSITY</a></td>
+                    <td>KAYSERİ</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=8E111474E48B70D8">PROF.DR. KERİM GÜNEY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0tXbLd9sBUWDzXSt_Cbp4XGrwTClGJU9GpHP-_2xehJ">ONDOKUZ MAYIS UNIVERSITY</a></td>
+                    <td>SAMSUN</td>
+                    <td>STATE</td>
+                    <td>1975</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=680A2D128746656F">PROF.DR. YAVUZ ÜNAL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2P5i28e9n0kJ3H9QjizULlbvbgQ2O_T1ouh_7FLbWHJ">ORDU UNIVERSITY</a></td>
+                    <td>ORDU</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9809FEC1806BB000">PROF.DR. ALİ AKDOĞAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzcKVKvCU5MClYQv6byIOsPDSh--IWGUumkwXAa42sRR">MIDDLE EAST TECHNICAL UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>STATE</td>
+                    <td>1956</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F3E61A460B2D0269">PROF.DR. MUSTAFA VERŞAN KÖK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2BvGtByvKvtAVUho-8S5EBbvbgQ2O_T1ouh_7FLbWHJ">OSMANIYE KORKUT ATA UNIVERSITY</a></td>
+                    <td>OSMANİYE</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=96E871CA36750251">PROF.DR. TURGAY UZUN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH4xHr7SnDplK1PFf7w0USTteEQelTm-XyRhBW_4oLHrN">OSTIM TECHNICAL UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2017</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=12957A377B917BEB">PROF.DR. MURAT ALİ YÜLEK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxvLyHXIZVYHWpE_sRLaG_I_HK2vOcGPj0bi__hecw25">OZYEGIN UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=633AB3636EA576E4">PROF.DR. FERİDE ESRA GENÇTÜRK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0f0jgsRXpI8W9QHWenvcKDDSh--IWGUumkwXAa42sRR">PAMUKKALE UNIVERSITY</a></td>
+                    <td>DENİZLİ</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E7C630CCAF3D24ED">PROF.DR. AHMET KUTLUHAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5dEPlEs425Nbbef7gMr_iERd242XOlgWf9_adZszWwP">PIRI REIS UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=403E0C921EB63D8A">PROF.DR. ORAL ERDOĞAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH85OUgQXuFOWTDjvGy3uaBPDSh--IWGUumkwXAa42sRR">RECEP TAYYIP ERDOGAN UNIVERSITY</a></td>
+                    <td>RİZE</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=42E086920EA7A9FB">PROF.DR. HÜSEYİN KARAMAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-VoGWYqYPWTGs7ii6lBaXy6rGdYDplwTYkFx5fwwQCj">SABANCI UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1996</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=210142ECAE3E94E3">PROF.DR. YUSUF LEBLEBİCİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_eglMjxnjcoE9hDpZlEpq3DSh--IWGUumkwXAa42sRR">UNIVERSITY OF HEALTH SCIENCES</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>2015</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=FD127A2C1660C8D5">PROF.DR. CEVDET ERDÖL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_I_KOOsWqyc1tdxkKFXJvNZ0rDnHIo0dVL3b_ZK_h53">SAKARYA UNIVERSITY OF APPLIED SCIENCES</a></td>
+                    <td>SAKARYA</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=9384FBD2B128320C">PROF.DR. MEHMET SARIBIYIK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-VoGWYqYPWTGs7ii6lBaXzKRkLi5eSVnKbktSdmDPA1">SAKARYA UNIVERSITY</a></td>
+                    <td>SAKARYA</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=34EA0CE804687CA2">PROF.DR. FATİH SAVAŞAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH_I_KOOsWqyc1tdxkKFXJvPKRkLi5eSVnKbktSdmDPA1">SAMSUN UNIVERSITY</a></td>
+                    <td>SAMSUN</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=C32E8BEA1196DD16">PROF.DR. MAHMUT AYDIN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7RuJkfsrGqjoN-S_WZUiWM_HK2vOcGPj0bi__hecw25">SANKO UNIVERSITY</a></td>
+                    <td>GAZİANTEP</td>
+                    <td>FOUNDATION</td>
+                    <td>2013</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=60D44FF20E6079E4">PROF.DR. GÜNER DAĞLI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3YXNcv2vG_4k5FrS-3We_VeEQelTm-XyRhBW_4oLHrN">SELCUK UNIVERSITY</a></td>
+                    <td>KONYA</td>
+                    <td>STATE</td>
+                    <td>1975</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E5A485A241F22929">PROF.DR. METİN AKSOY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0gNnIWIrpfREIchmyCccecRd242XOlgWf9_adZszWwP">SIIRT UNIVERSITY</a></td>
+                    <td>SİİRT</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F555CF0A3D0C09D4">PROF.DR. NİHAT ŞINDAK</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3GSR1tQgj7Fqoy-PMSIKJpbvbgQ2O_T1ouh_7FLbWHJ">SINOP UNIVERSITY</a></td>
+                    <td>SİNOP</td>
+                    <td>STATE</td>
+                    <td>2007</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=2240086DCA964B71">PROF.DR. NİHAT DALGIN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-w-XTbxqmBmbBwd_EXvkzK6rGdYDplwTYkFx5fwwQCj">SIVAS SCIENCE AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>SİVAS</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=E1DF426CB901F0CC">PROF.DR. MEHMET KUL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0EFFZh41SA-7aie-CG6FFg_HK2vOcGPj0bi__hecw25">SIVAS CUMHURIYET UNIVERSITY</a></td>
+                    <td>SİVAS</td>
+                    <td>STATE</td>
+                    <td>1974</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=7E04D2D2BE31B92A">PROF.DR. ALİM YILDIZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH93W7L4aaoTU5ioWvPHwQupeEQelTm-XyRhBW_4oLHrN">SULEYMAN DEMIREL UNIVERSITY</a></td>
+                    <td>ISPARTA</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=48715142EB1F8DDF">PROF.DR. İLKER HÜSEYİN ÇARIKÇI</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-b0tnJeJD1Lh8jgcliKyTDGrwTClGJU9GpHP-_2xehJ">SIRNAK UNIVERSITY</a></td>
+                    <td>ŞIRNAK</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=FC654A0F6CCBB2D3">PROF.DR. MEHMET EMİN ERKAN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-w-XTbxqmBmbBwd_EXvkzLDSh--IWGUumkwXAa42sRR">TARSUS UNIVERSITY</a></td>
+                    <td>MERSİN</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=162B0C9A9DFE462C">PROF.DR. ORHAN AYDIN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0jGpeglDlg5ZFYZzFLj_vVeEQelTm-XyRhBW_4oLHrN">TED UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=0DA2642E2997F8D2">PROF.DR. İHSAN SABUNCUOĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH3irF49_czBeDEio3c7TCwZZ0rDnHIo0dVL3b_ZK_h53">TEKIRDAG NAMIK KEMAL UNIVERSITY</a></td>
+                    <td>TEKİRDAĞ</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=84D175D077556023">PROF.DR. MÜMİN ŞAHİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH9-j-8-pP6nXzIceBf8vU4VeEQelTm-XyRhBW_4oLHrN">TOBB UNIVERSITY OF ECONOMICS AND TECHNOLOGY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2003</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=BF7B6A6838AF29FE">PROF.DR. YUSUF SARINAY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHzoVJtTaFIcS3pC7jyjn_xxbvbgQ2O_T1ouh_7FLbWHJ">TOKAT GAZIOSMANPASA UNIVERSITY</a></td>
+                    <td>TOKAT</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=B3DB0A9170464566">PROF.DR. BÜNYAMİN ŞAHİN</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-l6P60DIEfGN6NOIm9NvLLKRkLi5eSVnKbktSdmDPA1">TOROS UNIVERSITY</a></td>
+                    <td>MERSİN</td>
+                    <td>FOUNDATION</td>
+                    <td>2009</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=29A57EF26171955D">PROF.DR. ÖMER ARIÖZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-w-XTbxqmBmbBwd_EXvkzJeEQelTm-XyRhBW_4oLHrN">TRABZON UNIVERSITY</a></td>
+                    <td>TRABZON</td>
+                    <td>STATE</td>
+                    <td>2018</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=67599DD7A6B4CCE5">PROF.DR. EMİN AŞIKKUTLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH03xzf20ZjtooN2jn9SrCJM_HK2vOcGPj0bi__hecw25">TRAKYA UNIVERSITY</a></td>
+                    <td>EDİRNE</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=6A9F0187D8D3B564">PROF.DR. ERHAN TABAKOĞLU</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH0JWo0aPROMbwe2koo8n5_k_HK2vOcGPj0bi__hecw25">UNIVERSITY OF TURKISH AERONAUTICAL ASSOCIATION</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2011</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=BAE25A83C4DF99CD">PROF.DR. HASAN ERBAY</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH08iZrtGOmKtTfpmbArh4w3v96FgaKCkCWcpWlro_ywH">TURKISH - GERMAN UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>2010</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=53B3AF640543AD5C">PROF.DR. HALİL AKKANAT</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwM3sEZkf8LKWzOXhbpthbDv96FgaKCkCWcpWlro_ywH">TURKEY INTERNATIONAL ISLAM, SCIENCE AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>2015</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2m9lJzv8o6o9xEiIq9V9r9Z0rDnHIo0dVL3b_ZK_h53">TURKISH-JAPANESE SCIENCE AND TECHNOLOGY UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>2017</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH2HXieFfNwvo4DNpH3pd6stZ0rDnHIo0dVL3b_ZK_h53">UFUK UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>1999</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=1A947017A08242BF">PROF.DR. TEVFİK TEZCANER</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH8juDtLFw0GqYvPbBENK6pc_HK2vOcGPj0bi__hecw25">USAK UNIVERSITY</a></td>
+                    <td>UŞAK</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7dMAlupTH2AmmMrkBm-EEVbvbgQ2O_T1ouh_7FLbWHJ">USKUDAR UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>2011</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=D7A71E5EEC6C1960">PROF.DR. MEHMET ZELKA</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxI0auC7yzfGG70rCPRDUXDv96FgaKCkCWcpWlro_ywH">VAN YUZUNCU YIL UNIVERSITY</a></td>
+                    <td>VAN</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=4FD8ACC3DCEC39CF">PROF.DR. HAMDULLAH ŞEVLİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7VBlzf7V25xmXag11TVhP9eEQelTm-XyRhBW_4oLHrN">YALOVA UNIVERSITY</a></td>
+                    <td>YALOVA</td>
+                    <td>STATE</td>
+                    <td>2008</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=F52D7C7913E3F98B">PROF.DR. SUAT CEBECİ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHyuZHdArAxX0ncy2tV4V_aYRd242XOlgWf9_adZszWwP">YASAR UNIVERSITY</a></td>
+                    <td>İZMİR</td>
+                    <td>FOUNDATION</td>
+                    <td>2001</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=BACCBEF33A7B71E4">PROF.DR. MEHMET CEMALİ DİNÇER</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHwRJuTYphZ_Mil-lA0l1l6FZ0rDnHIo0dVL3b_ZK_h53">YEDITEPE UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>FOUNDATION</td>
+                    <td>1996</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=5F8390B6A9EB16B0">PROF.DR. CANAN AYKUT BİNGÖL</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH-P_sklKOGwChh1-5NPp8O1eEQelTm-XyRhBW_4oLHrN">YILDIZ TECHNICAL UNIVERSITY</a></td>
+                    <td>İSTANBUL</td>
+                    <td>STATE</td>
+                    <td>1982</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=AD32971AB5C5BD68">PROF.DR. TAMER YILMAZ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOHxTY-BWSXK-hiLy-Be7ZI7m6rGdYDplwTYkFx5fwwQCj">YOZGAT BOZOK UNIVERSITY</a></td>
+                    <td>YOZGAT</td>
+                    <td>STATE</td>
+                    <td>2006</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=170D8F80E7762530">PROF.DR. AHMET KARADAĞ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH7dMAlupTH2AmmMrkBm-EEVeEQelTm-XyRhBW_4oLHrN">YUKSEK IHTISAS UNIVERSITY</a></td>
+                    <td>ANKARA</td>
+                    <td>FOUNDATION</td>
+                    <td>2013</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=49A973DEE20625C6">PROF.DR. MUSTAFA PAÇ</a>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><a href="/AkademikArama/AkademisyenArama?islem=x-COXS1DGrCQqwGLCQBOH5xIMpG6Xkg-FV6sevZVyMG6rGdYDplwTYkFx5fwwQCj">ZONGULDAK BULENT ECEVIT UNIVERSITY</a></td>
+                    <td>ZONGULDAK</td>
+                    <td>STATE</td>
+                    <td>1992</td>
+
+                    <td>
+
+                        <a href="/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId=A6BD6ED3AB4B6F83">PROF.DR. MUSTAFA ÇUFALI</a>
+
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <hr>
+    <footer>
+        <!-- Foorter baslangic-->
+        <div class="container">
+            <div class="row v-center">
+                <p>2021
+                    &copy;
+                    Council of Higher Education</p>
+            </div>
+        </div>
+        <!-- Foorter bitis-->
+    </footer>
+</div>
+<!--
+================================================== -->
+<!-- javascript dosyaları -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrapValidator.min.js"></script>
+<script src="../js/anasayfa.js?v=311219"></script>
+</body>
+</html>
