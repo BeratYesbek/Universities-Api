@@ -1,0 +1,3 @@
+class CityPolicy < AdminPolicy
+
+end

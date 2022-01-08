@@ -1,0 +1,3 @@
+class StatePolicy < AdminPolicy
+
+end
