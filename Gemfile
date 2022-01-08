@@ -58,3 +58,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'open-uri'
 gem 'nokogiri', '~> 1.12', '>= 1.12.5'
+gem 'devise'
+gem 'devise_token_auth'
+gem "pundit"
+gem 'rack-cors'
