@@ -1,12 +1,33 @@
 module Api
   class UniversitiesController < ApplicationController
     before_action :set_university, only: %i[update show destroy]
-
+    class A
+      attr_accessor :name
+      attr_accessor :city
+    end
     def index
-      @universities = University.all
+      require 'nokogiri'
+      require 'open-uri'
+      require 'json'
+
+      @universities = University.joins(:country).where('LOWER(countries.name) = ?', "turkey")
+      array = Array.new
+      @universities.each do |t|
+        uni = A.new
+        uni.name = t.name
+        uni.city = t.city.name
+        array.append(uni)
+      end
+
+      File.open("./app/assets/json/turkey_universities.json", "w") do |f|
+        byebug
+        f.write(array.to_json)
+      end
+
       if !@universities.blank?
         render :index, state: :ok
       end
+
     end
 
     def get_by_country_id

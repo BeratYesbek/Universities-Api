@@ -1,0 +1,838 @@
+[
+  {
+    "name": "İstanbul University",
+    "city": "Istanbul"
+  },
+  {
+    "name": "Marmara University",
+    "city": "Istanbul"
+  },
+  {
+    "name": "ABDULLAH GUL UNIVERSITY",
+    "city": "KAYSERİ"
+  },
+  {
+    "name": "ACIBADEM MEHMET ALI AYDINLAR UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ADANA ALPARSLAN TURKES SCIENCE AND TECHNOLOGY UNIVERSITY",
+    "city": "ADANA"
+  },
+  {
+    "name": "ADIYAMAN UNIVERSITY",
+    "city": "ADIYAMAN"
+  },
+  {
+    "name": "AFYON KOCATEPE UNIVERSITY",
+    "city": "AFYONKARAHİSAR"
+  },
+  {
+    "name": "AFYONKARAHISAR HEALTH SCIENCES UNIVERSITY",
+    "city": "AFYONKARAHİSAR"
+  },
+  {
+    "name": "AGRI IBRAHIM CECEN UNIVERSITY",
+    "city": "AĞRI"
+  },
+  {
+    "name": "AKDENIZ UNIVERSITY",
+    "city": "ANTALYA"
+  },
+  {
+    "name": "AKSARAY UNIVERSITY",
+    "city": "AKSARAY"
+  },
+  {
+    "name": "ALANYA ALAADDIN KEYKUBAT UNIVERSITY",
+    "city": "ANTALYA"
+  },
+  {
+    "name": "ALANYA HAMDULLAH EMIN PASA UNIVERSITY",
+    "city": "ANTALYA"
+  },
+  {
+    "name": "ALTINBAS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "AMASYA UNIVERSITY",
+    "city": "AMASYA"
+  },
+  {
+    "name": "ANADOLU UNIVERSITY",
+    "city": "ESKİŞEHİR"
+  },
+  {
+    "name": "ANKA UNIVERSITY OF TECHNOLOGY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANKARA SCIENCE UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANKARA HACI BAYRAM VELI UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANKARA MEDIPOL UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANKARA MUSIC AND FINE ARTS UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "SOCIAL SCIENCES UNIVERSITY OF ANKARA",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANKARA UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANKARA YILDIRIM BEYAZIT UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ANTALYA AKEV UNIVERSITY",
+    "city": "ANTALYA"
+  },
+  {
+    "name": "ANTALYA BILIM UNIVERSITY",
+    "city": "ANTALYA"
+  },
+  {
+    "name": "ARDAHAN UNIVERSITY",
+    "city": "ARDAHAN"
+  },
+  {
+    "name": "ARTVIN CORUH UNIVERSITY",
+    "city": "ARTVİN"
+  },
+  {
+    "name": "ATASEHIR ADIGUZEL VOCATIONAL SCHOOL",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ATATURK UNIVERSITY",
+    "city": "ERZURUM"
+  },
+  {
+    "name": "ATILIM UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "UNIVERSITY OF EURASIA",
+    "city": "TRABZON"
+  },
+  {
+    "name": "AYDIN ADNAN MENDERES UNIVERSITY",
+    "city": "AYDIN"
+  },
+  {
+    "name": "BAHCESEHIR UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "BALIKESIR UNIVERSITY",
+    "city": "BALIKESİR"
+  },
+  {
+    "name": "BANDIRMA ONYEDI EYLUL UNIVERSITY",
+    "city": "BALIKESİR"
+  },
+  {
+    "name": "BARTIN UNIVERSITY",
+    "city": "BARTIN"
+  },
+  {
+    "name": "BASKENT UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "BATMAN UNIVERSITY",
+    "city": "BATMAN"
+  },
+  {
+    "name": "BAYBURT UNIVERSITY",
+    "city": "BAYBURT"
+  },
+  {
+    "name": "BEYKENT UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "BEYKOZ UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "BEZMI ALEM FOUNDATION UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "BILECIK SEYH EDEBALI UNIVERSITY",
+    "city": "BİLECİK"
+  },
+  {
+    "name": "BINGOL UNIVERSITY",
+    "city": "BİNGÖL"
+  },
+  {
+    "name": "BIRUNI UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "BITLIS EREN UNIVERSITY",
+    "city": "BİTLİS"
+  },
+  {
+    "name": "BOGAZICI UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "BOLU ABANT IZZET BAYSAL UNIVERSITY",
+    "city": "BOLU"
+  },
+  {
+    "name": "BURDUR MEHMET AKIF ERSOY UNIVERSITY",
+    "city": "BURDUR"
+  },
+  {
+    "name": "BURSA TECHNICAL UNIVERSITY",
+    "city": "BURSA"
+  },
+  {
+    "name": "BURSA ULUDAG UNIVERSITY",
+    "city": "BURSA"
+  },
+  {
+    "name": "CAG UNIVERSITY",
+    "city": "MERSİN"
+  },
+  {
+    "name": "CANAKKALE ONSEKIZ MART UNIVERSITY",
+    "city": "ÇANAKKALE"
+  },
+  {
+    "name": "CANKAYA UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "CANKIRI KARATEKIN UNIVERSITY",
+    "city": "ÇANKIRI"
+  },
+  {
+    "name": "CUKUROVA UNIVERSITY",
+    "city": "ADANA"
+  },
+  {
+    "name": "DEMIROGLU SCIENCE UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "DICLE UNIVERSITY",
+    "city": "DİYARBAKIR"
+  },
+  {
+    "name": "DOGUS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "DOKUZ EYLUL UNIVERSITY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "DUZCE UNIVERSITY",
+    "city": "DÜZCE"
+  },
+  {
+    "name": "EGE UNIVERSITY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "ERCIYES UNIVERSITY",
+    "city": "KAYSERİ"
+  },
+  {
+    "name": "ERZINCAN BINALI YILDIRIM UNIVERSITY",
+    "city": "ERZİNCAN"
+  },
+  {
+    "name": "ERZURUM TECHNICAL UNIVERSITY",
+    "city": "ERZURUM"
+  },
+  {
+    "name": "ESKISEHIR OSMANGAZI UNIVERSITY",
+    "city": "ESKİŞEHİR"
+  },
+  {
+    "name": "ESKISEHIR TECHNICAL UNIVERSITY",
+    "city": "ESKİŞEHİR"
+  },
+  {
+    "name": "FATIH SULTAN MEHMET VAKIF UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "FENERBAHCE UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "FIRAT UNIVERSITY",
+    "city": "ELAZIĞ"
+  },
+  {
+    "name": "GALATASARAY UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "GAZI UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "GAZIANTEP ISLAM SCIENCE AND TECHNOLOGY UNIVERSITY",
+    "city": "GAZİANTEP"
+  },
+  {
+    "name": "GAZIANTEP UNIVERSITY",
+    "city": "GAZİANTEP"
+  },
+  {
+    "name": "GEBZE TECHNICAL UNIVERSITY",
+    "city": "KOCAELİ"
+  },
+  {
+    "name": "GIRESUN UNIVERSITY",
+    "city": "GİRESUN"
+  },
+  {
+    "name": "GUMUSHANE UNIVERSITY",
+    "city": "GÜMÜŞHANE"
+  },
+  {
+    "name": "HACETTEPE UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "HAKKARI UNIVERSITY",
+    "city": "HAKKARİ"
+  },
+  {
+    "name": "HALIC UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "HARRAN UNIVERSITY",
+    "city": "ŞANLIURFA"
+  },
+  {
+    "name": "HASAN KALYONCU UNIVERSITY",
+    "city": "GAZİANTEP"
+  },
+  {
+    "name": "HATAY MUSTAFA KEMAL UNIVERSITY",
+    "city": "HATAY"
+  },
+  {
+    "name": "HITIT UNIVERSITY",
+    "city": "ÇORUM"
+  },
+  {
+    "name": "IGDIR UNIVERSITY",
+    "city": "IĞDIR"
+  },
+  {
+    "name": "ISPARTA UNIVERSITY OF APPLIED SCIENCES",
+    "city": "ISPARTA"
+  },
+  {
+    "name": "ISIK UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "IBN HALDUN UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "IHSAN DOGRAMACI BILKENT UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "INONU UNIVERSITY",
+    "city": "MALATYA"
+  },
+  {
+    "name": "ISKENDERUN TECHNICAL UNIVERSITY",
+    "city": "HATAY"
+  },
+  {
+    "name": "ISTANBUL AREL UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL ATLAS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL AYDIN UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL AYVANSARAY UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL BILGI UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL ESENYURT UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL GALATA UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL GEDIK UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL GELISIM UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL KENT UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL KULTUR UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL MEDENIYET UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL MEDIPOL UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL OKAN UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL RUMELI UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL SABAHATTIN ZAIM UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "null",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL HEALTH AND TECHNOLOGY UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL SISLI VOCATIONAL SCHOOL",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL TECHNICAL UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL COMMERCE UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL UNIVERSITY-CERRAHPASA",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL YENI YUZYIL UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTANBUL 29 MAYIS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "ISTINYE UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "IZMIR BAKIRCAY UNIVERSITY ",
+    "city": "İZMİR"
+  },
+  {
+    "name": "IZMIR DEMOCRACY UNIVERSITY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "IZMIR UNIVERSITY OF ECONOMICS",
+    "city": "İZMİR"
+  },
+  {
+    "name": "IZMIR KATIP CELEBI UNIVERSITY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "IZMIR KAVRAM VOCATIONAL COLLEGE OF HIGHER EDUCATION",
+    "city": "İZMİR"
+  },
+  {
+    "name": "IZMIR TINAZTEPE UNIVERSITY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "IZMIR INSTITUTE OF TECHNOLOGY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "KADIR HAS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "KAFKAS UNIVERSITY",
+    "city": "KARS"
+  },
+  {
+    "name": "KAHRAMANMARAS ISTIKLAL UNIVERSITY",
+    "city": "KAHRAMANMARAŞ"
+  },
+  {
+    "name": "KAHRAMANMARAS SUTCU IMAM UNIVERSITY",
+    "city": "KAHRAMANMARAŞ"
+  },
+  {
+    "name": "CAPPADOCIA UNIVERSITY",
+    "city": "NEVŞEHİR"
+  },
+  {
+    "name": "KARABUK UNIVERSITY",
+    "city": "KARABÜK"
+  },
+  {
+    "name": "KARADENIZ TECHNICAL UNIVERSITY",
+    "city": "TRABZON"
+  },
+  {
+    "name": "KARAMANOGLU MEHMETBEY UNIVERSITY",
+    "city": "KARAMAN"
+  },
+  {
+    "name": "KASTAMONU UNIVERSITY",
+    "city": "KASTAMONU"
+  },
+  {
+    "name": "KAYSERI UNIVERSITY",
+    "city": "KAYSERİ"
+  },
+  {
+    "name": "KIRIKKALE UNIVERSITY",
+    "city": "KIRIKKALE"
+  },
+  {
+    "name": "KIRKLARELI UNIVERSITY",
+    "city": "KIRKLARELİ"
+  },
+  {
+    "name": "KIRSEHIR AHI EVRAN UNIVERSITY",
+    "city": "KIRŞEHİR"
+  },
+  {
+    "name": "KILIS 7 ARALIK UNIVERSITY",
+    "city": "KİLİS"
+  },
+  {
+    "name": "KOCAELI HEALTH AND TECHNOLOGY UNIVERSITY",
+    "city": "KOCAELİ"
+  },
+  {
+    "name": "KOCAELI UNIVERSITY",
+    "city": "KOCAELİ"
+  },
+  {
+    "name": "KOC UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "KONYA FOOD AND AGRICULTURE UNIVERSITY",
+    "city": "KONYA"
+  },
+  {
+    "name": "KONYA TECHNICAL UNIVERSITY",
+    "city": "KONYA"
+  },
+  {
+    "name": "KTO KARATAY UNIVERSITY",
+    "city": "KONYA"
+  },
+  {
+    "name": "KUTAHYA DUMLUPINAR UNIVERSITY",
+    "city": "KÜTAHYA"
+  },
+  {
+    "name": "KUTAHYA HEALTH SCIENCES UNIVERSITY",
+    "city": "KÜTAHYA"
+  },
+  {
+    "name": "LOKMAN HEKIM UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "MALATYA TURGUT OZAL UNIVERSITY",
+    "city": "MALATYA"
+  },
+  {
+    "name": "MALTEPE UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "MANISA CELAL BAYAR UNIVERSITY",
+    "city": "MANİSA"
+  },
+  {
+    "name": "MARDIN ARTUKLU UNIVERSITY",
+    "city": "MARDİN"
+  },
+  {
+    "name": "MARMARA UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "MEF UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "MERSIN UNIVERSITY",
+    "city": "MERSİN"
+  },
+  {
+    "name": "MIMAR SINAN FINE ARTS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "MUGLA SITKI KOCMAN UNIVERSITY",
+    "city": "MUĞLA"
+  },
+  {
+    "name": "MUNZUR UNIVERSITY",
+    "city": "TUNCELİ"
+  },
+  {
+    "name": "MUS ALPARSLAN UNIVERSITY",
+    "city": "MUŞ"
+  },
+  {
+    "name": "NECMETTIN ERBAKAN UNIVERSITY",
+    "city": "KONYA"
+  },
+  {
+    "name": "NEVSEHIR HACI BEKTAS VELI UNIVERSITY",
+    "city": "NEVŞEHİR"
+  },
+  {
+    "name": "NIGDE OMER HALISDEMIR UNIVERSITY",
+    "city": "NİĞDE"
+  },
+  {
+    "name": "NISANTASI UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "NUH NACI YAZGAN UNIVERSITY",
+    "city": "KAYSERİ"
+  },
+  {
+    "name": "ONDOKUZ MAYIS UNIVERSITY",
+    "city": "SAMSUN"
+  },
+  {
+    "name": "ORDU UNIVERSITY",
+    "city": "ORDU"
+  },
+  {
+    "name": "MIDDLE EAST TECHNICAL UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "OSMANIYE KORKUT ATA UNIVERSITY",
+    "city": "OSMANİYE"
+  },
+  {
+    "name": "OSTIM TECHNICAL UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "OZYEGIN UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "PAMUKKALE UNIVERSITY",
+    "city": "DENİZLİ"
+  },
+  {
+    "name": "PIRI REIS UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "RECEP TAYYIP ERDOGAN UNIVERSITY",
+    "city": "RİZE"
+  },
+  {
+    "name": "SABANCI UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "UNIVERSITY OF HEALTH SCIENCES",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "SAKARYA UNIVERSITY OF APPLIED SCIENCES",
+    "city": "SAKARYA"
+  },
+  {
+    "name": "SAKARYA UNIVERSITY",
+    "city": "SAKARYA"
+  },
+  {
+    "name": "SAMSUN UNIVERSITY",
+    "city": "SAMSUN"
+  },
+  {
+    "name": "SANKO UNIVERSITY",
+    "city": "GAZİANTEP"
+  },
+  {
+    "name": "SELCUK UNIVERSITY",
+    "city": "KONYA"
+  },
+  {
+    "name": "SIIRT UNIVERSITY",
+    "city": "SİİRT"
+  },
+  {
+    "name": "SINOP UNIVERSITY",
+    "city": "SİNOP"
+  },
+  {
+    "name": "SIVAS SCIENCE AND TECHNOLOGY UNIVERSITY",
+    "city": "SİVAS"
+  },
+  {
+    "name": "SIVAS CUMHURIYET UNIVERSITY",
+    "city": "SİVAS"
+  },
+  {
+    "name": "SULEYMAN DEMIREL UNIVERSITY",
+    "city": "ISPARTA"
+  },
+  {
+    "name": "SIRNAK UNIVERSITY",
+    "city": "ŞIRNAK"
+  },
+  {
+    "name": "TARSUS UNIVERSITY",
+    "city": "MERSİN"
+  },
+  {
+    "name": "TED UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "TEKIRDAG NAMIK KEMAL UNIVERSITY",
+    "city": "TEKİRDAĞ"
+  },
+  {
+    "name": "TOBB UNIVERSITY OF ECONOMICS AND TECHNOLOGY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "TOKAT GAZIOSMANPASA UNIVERSITY",
+    "city": "TOKAT"
+  },
+  {
+    "name": "TOROS UNIVERSITY",
+    "city": "MERSİN"
+  },
+  {
+    "name": "TRABZON UNIVERSITY",
+    "city": "TRABZON"
+  },
+  {
+    "name": "TRAKYA UNIVERSITY",
+    "city": "EDİRNE"
+  },
+  {
+    "name": "UNIVERSITY OF TURKISH AERONAUTICAL ASSOCIATION",
+    "city": "ANKARA"
+  },
+  {
+    "name": "TURKISH - GERMAN UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "TURKEY INTERNATIONAL ISLAM, SCIENCE AND TECHNOLOGY UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "TURKISH-JAPANESE SCIENCE AND TECHNOLOGY UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "UFUK UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "USAK UNIVERSITY",
+    "city": "UŞAK"
+  },
+  {
+    "name": "USKUDAR UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "VAN YUZUNCU YIL UNIVERSITY",
+    "city": "VAN"
+  },
+  {
+    "name": "YALOVA UNIVERSITY",
+    "city": "YALOVA"
+  },
+  {
+    "name": "YASAR UNIVERSITY",
+    "city": "İZMİR"
+  },
+  {
+    "name": "YEDITEPE UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "YILDIZ TECHNICAL UNIVERSITY",
+    "city": "İSTANBUL"
+  },
+  {
+    "name": "YOZGAT BOZOK UNIVERSITY",
+    "city": "YOZGAT"
+  },
+  {
+    "name": "YUKSEK IHTISAS UNIVERSITY",
+    "city": "ANKARA"
+  },
+  {
+    "name": "ZONGULDAK BULENT ECEVIT UNIVERSITY",
+    "city": "ZONGULDAK"
+  }
+]
