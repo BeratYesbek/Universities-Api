@@ -9,5 +9,7 @@ If you want to develop this project with us, you can find universities of countr
 
  ##### For example 
 Germany.rb => This file must parse all universities in Germany from HTML
+<br />
 Germany.json => After you parsed universities from html you should write to json file
+<br />
 Germany.html => You can find this HTML on Wikipedia or another websites
