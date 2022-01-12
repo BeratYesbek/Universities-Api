@@ -1,5 +1,5 @@
 ### Description
-While we are developing an intern manage and automation system in company, we couldn't find any API,  giving list of University in the world. A couple of days ago we decided with my friend we announced this project 
+While we are developing an intern management and automation system in company, we couldn't find any API,  giving list of University in the world. We decided with my friend, companies and people need this, this is the reason we announced this project 
 
 ### What are we doing ?
 Firstly we find list of universities in the world country by country, and after we will parse all HTML and take list from HTML page we convert HTML to JSON file and save to our database. Also, we are developing API and SQL query at the same time
