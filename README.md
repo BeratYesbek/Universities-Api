@@ -13,3 +13,35 @@ Germany.rb => This file must parse all universities in Germany from HTML
 Germany.json => After you parsed universities from html you should write to json file
 <br />
 Germany.html => You can find this HTML on Wikipedia or another websites
+
+#### Our Goals Country 
+Germany
+<br />
+USA
+<br />
+Turkey
+<br />
+England
+<br />
+France
+<br />
+Spain
+<br />
+Italy
+<br />
+Korea
+<br />
+China
+<br />
+Russia
+<br />
+Canada
+<br />
+Iceland
+<br />
+Norway
+<br />
+Finland
+<br />
+Ireland
+
