@@ -14,7 +14,7 @@ Germany.json => After you parsed universities from html you should write to json
 <br />
 Germany.html => You can find this HTML on Wikipedia or another websites
 
-#### Our Goals Country 
+#### Goal Countries
 Germany
 <br />
 USA
