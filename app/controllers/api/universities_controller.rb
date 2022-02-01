@@ -4,23 +4,26 @@ module Api
     class A
       attr_accessor :name
       attr_accessor :city
+      attr_accessor :country
+      attr_accessor :state
     end
     def index
       require 'nokogiri'
       require 'open-uri'
       require 'json'
 
-      @universities = University.joins(:country).where('LOWER(countries.name) = ?', "turkey")
+      @universities = University.all
       array = Array.new
       @universities.each do |t|
         uni = A.new
         uni.name = t.name
         uni.city = t.city.name
+        uni.country = t.country.name
         array.append(uni)
       end
 
-      File.open("./app/assets/json/turkey_universities.json", "w") do |f|
-        byebug
+      File.open("./app/assets/json/netherlands_universities.json", "w") do |f|
+        
         f.write(array.to_json)
       end
 

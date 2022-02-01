@@ -18,6 +18,16 @@ module Api
     end
 
     def create
+      
+      #File.open("./app/assets/json/cities/nl.json", "w") 
+        ActiveSupport::JSON.decode(File.read('./app/assets/json/cities/nl.json')).each do |city|
+          state = State.find_by(name: city["admin_name"])
+          City.create(name:city["city"],state: state,country_id:1)
+          puts city["city"]
+        end
+  
+
+=begin
       @city = City.create(city_params)
       if @city.valid?
         if @city.save
@@ -30,6 +40,7 @@ module Api
         @message = @city.errors.full_messages
         render json: @message
       end
+=end
     end
 
     def update
